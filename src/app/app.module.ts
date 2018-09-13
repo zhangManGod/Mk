@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { StockManagerComponent } from './stock/stock-manager/stock-manager.component';
+import { StarsComponent } from './stars/stars.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { StockManagerComponent } from './stock/stock-manager/stock-manager.compo
     SidebarComponent,
     FooterComponent,
     ContentComponent,
-    StockManagerComponent
+    StockManagerComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule
