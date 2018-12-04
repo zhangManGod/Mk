@@ -14,6 +14,7 @@ import { StockFilterPipe } from './stock/stock-filter.pipe';
 import { Routes, RouterModule } from '@angular/router';
 import { DoshboardComponent } from './doshboard/doshboard.component';
 import { AddStockComponent } from './stock/add-stock/add-stock.component';
+import { StarRatingModule } from 'angular-star-rating';
 
 
 const routeConfig: Routes = [
@@ -41,7 +42,8 @@ const routeConfig: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routeConfig)
+    RouterModule.forRoot(routeConfig),
+    StarRatingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

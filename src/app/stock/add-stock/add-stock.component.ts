@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-stock',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddStockComponent implements OnInit {
 
-  constructor() { }
+  constructor(public routers:Router) { }
 
   ngOnInit() {
+  }
+
+  returnStock(){
+
+    this.routers.navigateByUrl('stock');
+
   }
 
 }

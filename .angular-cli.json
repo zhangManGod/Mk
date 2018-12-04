@@ -24,7 +24,8 @@
         "../node_modules/font-awesome/css/font-awesome.css",
         "../node_modules/ionicons/dist/css/ionicons.min.css",
         "skin-blue.min.css",
-        "AdminLTE.min.css"
+        "AdminLTE.min.css",
+        "../node_modules/css-star-rating/css/star-rating.css"
       ],
       "scripts": [
         "jquery3.js",
