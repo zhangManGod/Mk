@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
@@ -10,7 +10,20 @@ import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { StockManagerComponent } from './stock/stock-manager/stock-manager.component';
 import { StarsComponent } from './stars/stars.component';
+import { StockFilterPipe } from './stock/stock-filter.pipe';
+import { Routes, RouterModule } from '@angular/router';
+import { DoshboardComponent } from './doshboard/doshboard.component';
+import { AddStockComponent } from './stock/add-stock/add-stock.component';
 
+
+const routeConfig: Routes = [
+
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DoshboardComponent },
+  { path: 'stock', component: StockManagerComponent },
+  { path: 'addStock', component: AddStockComponent}
+
+]
 
 @NgModule({
   declarations: [
@@ -21,10 +34,14 @@ import { StarsComponent } from './stars/stars.component';
     FooterComponent,
     ContentComponent,
     StockManagerComponent,
-    StarsComponent
+    StarsComponent,
+    StockFilterPipe,
+    DoshboardComponent,
+    AddStockComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routeConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
