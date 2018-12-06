@@ -9,12 +9,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { StockManagerComponent } from './stock/stock-manager/stock-manager.component';
-import { StarsComponent } from './stars/stars.component';
 import { StockFilterPipe } from './stock/stock-filter.pipe';
 import { Routes, RouterModule } from '@angular/router';
 import { DoshboardComponent } from './doshboard/doshboard.component';
 import { AddStockComponent } from './stock/add-stock/add-stock.component';
 import { StarRatingModule } from 'angular-star-rating';
+import { UpdateStockComponent } from './stock/update-stock/update-stock.component';
 
 
 const routeConfig: Routes = [
@@ -22,7 +22,8 @@ const routeConfig: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DoshboardComponent },
   { path: 'stock', component: StockManagerComponent },
-  { path: 'addStock', component: AddStockComponent}
+  { path: 'addStock', component: AddStockComponent},
+  { path: 'updateStock/:name/:price/:stars', component: UpdateStockComponent}
 
 ]
 
@@ -35,10 +36,10 @@ const routeConfig: Routes = [
     FooterComponent,
     ContentComponent,
     StockManagerComponent,
-    StarsComponent,
     StockFilterPipe,
     DoshboardComponent,
-    AddStockComponent
+    AddStockComponent,
+    UpdateStockComponent
   ],
   imports: [
     BrowserModule,

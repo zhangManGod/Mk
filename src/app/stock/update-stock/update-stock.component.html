@@ -10,20 +10,20 @@
         <label for="inputName" class="col-sm-2 control-label">名字</label>
         <div class="input-group col-xs-3">
           <span class="input-group-addon"><i class="fa fa-rocket"></i></span>
-          <input type="text" class="form-control" placeholder="Name">
+          <input type="text" class="form-control" placeholder="Name" value={{showName}}>
         </div>
       </div>
       <div class="form-group">
         <label for="inputPassword3" class="col-sm-2 control-label">价格</label>
         <div class="input-group col-xs-3">
           <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" value={{showPrice}}>
         </div>
       </div>
       <div class="form-group">
         <label for="inputDesc" class="col-sm-2 control-label">星级</label>
-        <div style = "width:150px;margin-left:140px;margin-top: 6px;">        
-          <star-rating [starType]="'svg'"  [rating]="1" [getColor]="getColor" ></star-rating>
+        <div style = "width:150px;margin-left:140px;margin-top: 6px;">     
+          <star-rating [starType]="'svg'"  [rating]="showRoting" [getColor]="getColor" ></star-rating>
         </div>
 
       </div>

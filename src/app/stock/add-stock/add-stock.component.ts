@@ -19,4 +19,10 @@ export class AddStockComponent implements OnInit {
 
   }
 
+  getColor(rating: number, numOfStars: number, staticColor: string): string {
+    console.log('getColor rating: ', rating, 'numOfStars: ', numOfStars, 'staticColor: ', staticColor);
+    let colors = ['default', 'negative', 'ok', 'positive'];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
 }

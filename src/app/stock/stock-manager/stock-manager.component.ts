@@ -28,6 +28,12 @@ export class StockManagerComponent implements OnInit {
 
   }
 
+  update(stock:Stock){
+
+    this.router.navigateByUrl(`updateStock/${stock.name}/${stock.price}/${stock.rating}`)
+
+  }
+
 }
 
 export class Stock{
